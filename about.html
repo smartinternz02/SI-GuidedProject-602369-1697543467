@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+ .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-size: cover;
+  border-radius: 5px;
+  background-color: rgba(157, 176, 231, 0.559);
+}
+
+.heading {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(16, 1, 1);
+  font-family: serif;
+}
+
+.navbar {
+  margin-right: 20px;
+}
+
+.navbar a {
+  display: inline-block;
+  color: rgb(6, 3, 20);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar a.active {
+  font-weight: bold;
+}
+
+.home {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  border-top-right-radius: 25%;
+}
+.img-fluid {
+    width: 50%; 
+    position: fixed; 
+    top: 250; 
+    left: 0; 
+    height:fit-content; 
+    padding-top: 7.5%;
+}
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(34, 96, 150);
+}
+
+.icon {
+    text-align: center;
+    background-color: whitesmoke;
+    margin: 20px;
+}
+/* Adjust the icon size, width, and height */
+.icon i {
+    font-size: 48px; 
+    width: 68px; 
+    height: 68px; 
+    float: left; 
+    margin-right: 5px; /* Add spacing between icons and descriptions */
+}
+
+/* Style for the description */
+.description {
+    float: left; /* Float descriptions to the left */
+    width: calc(100% - 58px);
+    color: brown; /* Adjust width to accommodate the icons and spacing */
+}
+
+/* Clear the float to prevent layout issues */
+.icon::after,
+.description::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.btn-container{
+    padding-left: 75%;
+    border-radius: 15px;
+    color: blue;
+}
+
+.icon p {
+    /*background-color: #ffcc00;  Use your desired highlight color */
+    padding: 5px; 
+    border-radius: 5px; 
+    color:black;
+    font-weight: bold;
+    font-size: 18px;/* Rounded corners for the highlight */
+}
+
+/* Style "Our Mission" section */
+.icon h2 {
+    font-weight: bold; /* Make the text bold to emphasize it */
+}
+.row{
+    padding:5px;
+    min-height: 75vh;
+    min-width: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="header">
+          <h1 class="heading">WHOLESALE CUSTOMER CLUSTER LABEL PREDICTION</h1>
+          <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/value">Predict</a>
+          </div>
+    </div>
+   <div class="container-fluid full-height">
+    <div class="row full-height">
+        <div class="col-md-6 full-height" style="background-color: rgb(244, 244, 244);">
+            <!-- First Half: Image -->
+            <img src="https://nmgprod.s3.amazonaws.com/media/files/f2/09/f209dcc76d120a2e4f3388dd462ce0a9/cover_image.jpg.760x400_q85_crop_upscale.jpg" class="img-fluid" alt="Image">
+        </div>
+        <div class="col-md-6 full-height" style="background-color: rgb(244, 244, 244);">
+            <!-- Second Half: Description and Icons -->
+            <h2 style="color: rgb(222, 22, 22);">Our Mission</h2>
+            
+            <div class="row">
+                <!-- Icon 1 -->
+                <div class="col-md-12">
+                    <div class="icon">
+                        <i class="fa-solid fa-database"></i>
+                        <p>Data collection is the key to accurate customer label prediction. With the right data, you can boost your sales and improve your customer experience.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Icon 2 -->
+                <div class="col-md-12">
+                    <div class="icon">
+                        <i class="fa-solid fa-chart-simple"></i>  
+                         <p>Analyze customer data to reveal hidden patterns and insights.
+                            Use data-driven insights to improve customer targeting and personalization.</p>
+
+                    </div>
+                </div>
+                
+                <!-- Icon 3 -->
+                <div class="col-md-12">
+                    <div class="icon">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        <p>Build accurate customer label prediction models with our easy-to-use platform and powerful machine learning algorithms.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Icon 4 -->
+                <div class="col-md-12">
+                    <div class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>Predict your wholesale customers' labels with accurate data and advanced machine learning models.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Add Bootstrap JS and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
