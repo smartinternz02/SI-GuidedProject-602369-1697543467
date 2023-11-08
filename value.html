@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color:#f0f8ffe; /* Set the background color for the entire page */
+            width: 100%;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            background-size: cover;
+            border-radius: 5px;
+            background-color: rgba(157, 176, 231, 0.559);
+        }
+
+        .heading {
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(16, 1, 1);
+            font-family: serif;
+        }
+
+        .navbar {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: rgb(6, 3, 20);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .home {
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            height: fit-content;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .img-fluid {
+            width: 50%;
+            position:fixed;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            height: 50%;
+            background-attachment: fixed;
+            border-top-left-radius:25% ;
+        }
+        .col-md-6{ /* Very light blue background color */
+                padding: 10px; /* Add padding for spacing */
+                min-height:fit-content; 
+                width: auto;
+                border-top-right-radius: 15%;
+
+          }
+          .col-md-6 h2{
+            font-style: italic;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-left: 10%;
+          }
+          .col-md-6 label{
+            color: black;
+            font-style: oblique;
+            font-weight: bold;       
+        }
+
+          .button-predict{
+            background-color: #148cd6;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-size: 18px;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                display: inline-block;
+                margin-top: 20px;
+                border-color: #148cd6;
+          }
+        .container {
+                /* Very light blue background color */
+                padding:5px; /* Add padding for spacing */
+                border-radius: 10px; /* Rounded corners */
+                padding-left: 15%;
+                width: min-content;
+            }
+
+            /* Style for labels */
+            .input-form label {
+                display: inline-block; 
+                width: 120px; 
+                text-align: right; 
+                margin-right: 10px; 
+            }
+
+        /* Additional styling for input fields if needed */
+        .input-form input {
+           font-style: italic; 
+        }
+    </style>
+</head>
+<body>
+<div class="home">
+    <div class="header">
+        <h1 class="heading">WHOLESALE CUSTOMER CLUSTER LABEL PREDICTION</h1>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/value">Predict</a>
+        </div>
+    </div>
+    <div class="container-fluid full-height">
+        <div class="row full-height">
+            <div class="col-md-6 full-height" style="background-color: #f0f8ff;">
+                <img src="https://images.businessnewsdaily.com/app/uploads/2019/03/25101809/Write-a-business-plan-1.png">
+            </div>
+            <div class="col-md-6 full-height" >
+                <h2 style="color: rgb(209, 23, 23);">Let's Know Customer Category</h2>
+                <div class="container">
+                    <form action="/predict" method="post">
+                        <div class="input-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="Channel">Channel:</label>
+                                    <input type="text" id="Channel" name="Channel"><br><br>
+            
+                                    <label for="Region">Region:</label>
+                                    <input type="text" id="Region" name="Region"><br><br>
+            
+                                    <label for="Fresh">Fresh:</label>
+                                    <input type="text" id="Fresh" name="Fresh"><br><br>
+            
+                                    <label for="Milk">Milk:</label>
+                                    <input type="text" id="Milk" name="Milk"><br><br>
+                                    <label for="Grocery">Grocery:</label>
+                                    <input type="text" id="Grocery" name="Grocery"><br><br>
+            
+                                    <label for="Frozen">Frozen:</label>
+                                    <input type="text" id="Frozen" name="Frozen"><br><br>
+            
+                                    <label for="Detergent_paper">Detergent Paper:</label>
+                                    <input type="text" id="Detergent_paper" name="Detergent_paper"><br><br>
+            
+                                    <label for="Delicassen">Delicassen:</label>
+                                    <input type="text" id="Delicassen" name="Delicassen"><br><br>
+                                </div>
+                            </div>
+                            <button class="button-predict" type="submit">Predict</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
